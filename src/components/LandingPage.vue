@@ -4,6 +4,10 @@
     </div>
     <h2 class="callOut">Hello, I'm Patrick.</h2>
     <h3 class="oneLiner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+    <div class="bottom">
+      <p>check out my blog ||
+      continue to projects</p>
+    </div>
   </div>
 </template>
 
@@ -52,5 +56,10 @@ export default {
   height: 45vw;
   border-radius: 45vw;
   background-color: var(--fillLight);
+}
+
+.bottom {
+  grid-row: 7/8;
+  grid-column: 1/5;
 }
 </style>

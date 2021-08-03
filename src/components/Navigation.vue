@@ -1,12 +1,14 @@
 <template lang="html">
 <div class="header">
-  <h1 class="navLogo">Patrick Brusven</h1>
+  <router-link to="/">
+    <h1 class="navLogo">Patrick Brusven</h1>
+  </router-link>
   <MobileBurger @click='toggleNavigation' class="mobileBurger" />
   <div id="nav" class="navContainer">
     <!-- <router-link to="/">Home</router-link> | -->
     <router-link to="/about">About</router-link>
-    <router-link to="/about">Projects</router-link>
-    <router-link to="/about">Contact</router-link>
+    <router-link to="/#projects">Projects</router-link>
+    <router-link to="/#contact">Contact</router-link>
   </div>
 </div>
 </template>
@@ -46,6 +48,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+a {
+  text-decoration: none;
+  color: var(--fillLighter);
+}
 .header {
   background-color: var(--fillDarker);
   position: fixed;

@@ -8,6 +8,16 @@ const routes = [
     component: Home
   },
   {
+    path: '/#projects',
+    name: 'Projects',
+    component: Home
+  },
+  {
+    path: '/#contact',
+    name: 'Contact',
+    component: Home
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -19,6 +29,17 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      return {el: to.hash,
+              top: 53,}
+    } else if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
   routes
 })
 

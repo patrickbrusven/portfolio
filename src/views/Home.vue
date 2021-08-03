@@ -1,7 +1,7 @@
 <template>
   <LandingPage />
-  <ExperiencePage />
-  <ContactPage />
+  <ExperiencePage id="projects" />
+  <ContactPage id="contact"/>
 </template>
 
 <script>

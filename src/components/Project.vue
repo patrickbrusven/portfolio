@@ -7,12 +7,12 @@
       <h3>{{ title }} </h3>
       <p>{{ description }}</p>
       <div class="buttons">
-        <A :href="`${ websiteLink }`" target="_blank" rel="noopener noreferrer">
+        <a :href="`${ websiteLink }`" target="_blank" rel="noopener noreferrer">
           Website
-        </A>
-        <A :href="`${ ghLink }`" target="_blank" rel="noopener noreferrer">
+        </a>
+        <a :href="`${ ghLink }`" target="_blank" rel="noopener noreferrer">
           GitHub
-        </A>
+        </a>
       </div>
     </div>
     <img class="logo" :src="require(`@/assets/${ logofilename }`)">

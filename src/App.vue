@@ -33,6 +33,12 @@ export default {
   margin: 0;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+  pointer: cursor;
+}
+
 body {
   background-color: var(--fillDarker);
   color: var(--fillLighter);
