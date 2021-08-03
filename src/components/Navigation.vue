@@ -1,14 +1,13 @@
 <template lang="html">
 <div class="header">
   <router-link to="/">
-    <h1 class="navLogo">Patrick Brusven</h1>
+    <h1 @click='clickName()' class="navLogo">Patrick Brusven</h1>
   </router-link>
-  <MobileBurger @click='toggleNavigation' class="mobileBurger" />
+  <MobileBurger @toggleNavigation='toggleNavigation'  class="mobileBurger" />
   <div id="nav" class="navContainer">
-    <!-- <router-link to="/">Home</router-link> | -->
-    <router-link to="/about">About</router-link>
-    <router-link to="/#projects">Projects</router-link>
-    <router-link to="/#contact">Contact</router-link>
+    <router-link @click='toggleNavigation' to="/about">About</router-link>
+    <router-link @click='toggleNavigation' to="/#projects">Projects</router-link>
+    <router-link @click='toggleNavigation' to="/#contact">Contact</router-link>
   </div>
 </div>
 </template>
@@ -22,28 +21,45 @@ export default {
   components: {
     MobileBurger,
   },
+
+  data() {
+    return {
+      navOpen: false,
+    }
+  },
+
   methods: {
     toggleNavigation() {
-      // const header = document.querySelector(
-      //   '.header'
-      // )
+      this.navOpen = !this.navOpen;
       const navContainer = document.querySelector(
         '.navContainer'
       )
-      // const navLogo = document.querySelector(
-      //   '.navLogo'
-      // )
-
-
-      // header.classList.toggle('headerOpen');
-
-      // navLogo.classList.toggle('navLogoOpen');
-
-      // navContainer.classList.toggle('firstOpen');
       navContainer.classList.toggle('openDrawer');
 
-    }
-  }
+      //navController()
+      const burger = document.querySelector('.navBurger');
+      const navX = document.querySelector('.navX');
+
+      burger.classList.toggle('transitionControllerClose');
+      navX.classList.toggle('transitionCTRClose');
+
+      burger.classList.toggle('transitionControllerOpen');
+      navX.classList.toggle('transitionCTROpen');
+
+
+      burger.classList.toggle('toggleSlide');
+      burger.classList.toggle('toggleOpacity');
+
+      navX.classList.toggle('toggOpacity');
+      navX.classList.toggle('toggleRotate');
+    },
+
+    clickName() {
+      if (this.navOpen) {
+        this.toggleNavigation();
+      }
+    },
+  },
 }
 </script>
 

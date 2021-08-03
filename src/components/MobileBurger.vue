@@ -1,5 +1,5 @@
 <template lang="html">
-  <div @click='navController' class="navToggle">
+  <div  @click='onClick()' class="navToggle">
     <div class="navBurger transitionControllerClose">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -16,23 +16,10 @@
 export default {
   name: 'MobileBurger',
 
+
   methods: {
-    navController() {
-      const burger = document.querySelector('.navBurger');
-      const navX = document.querySelector('.navX');
-
-      burger.classList.toggle('transitionControllerClose');
-      navX.classList.toggle('transitionCTRClose');
-
-      burger.classList.toggle('transitionControllerOpen');
-      navX.classList.toggle('transitionCTROpen');
-
-
-      burger.classList.toggle('toggleSlide');
-      burger.classList.toggle('toggleOpacity');
-
-      navX.classList.toggle('toggOpacity');
-      navX.classList.toggle('toggleRotate');
+    onClick() {
+      this.$emit('toggleNavigation');
     }
   },
 }
