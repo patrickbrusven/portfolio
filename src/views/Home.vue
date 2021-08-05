@@ -1,7 +1,7 @@
 <template>
-  <LandingPage />
-  <ExperiencePage id="projects" />
-  <ContactPage id="contact"/>
+  <LandingPage class="section" />
+  <ExperiencePage class="section" id="projects" />
+  <ContactPage class="section" id="contact"/>
 </template>
 
 <script>
@@ -15,6 +15,43 @@ export default {
     LandingPage,
     ExperiencePage,
     ContactPage,
+  },
+
+  data() {
+    return {
+      sections: null
+    };
+  },
+
+  // created() {
+  //   this.sections = document.querySelectorAll(".section");
+  //   this.sectionObserverd();
+  // },
+
+  methods: {
+    sectionObserverd() {
+
+      const options = {
+        root: null,
+        threshold: 0,
+        rootMargin: "-50px",
+      }
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach( entry => {
+          console.log(entry);
+        })
+      }, options)
+
+      this.sections.forEach(section => {
+        observer.observe(section)
+      })
+    }
+  },
+
+  mounted() {
+    this.sections = document.querySelectorAll(".section");
+    this.sectionObserverd();
   }
 }
 </script>
