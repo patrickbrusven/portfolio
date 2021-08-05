@@ -44,7 +44,7 @@ export default {
 .navBurger div {
   width: 27px;
   height: 4px;
-  background-color: var(--fillMedium);
+  background-color: var(--fillDarker);
   margin: 5px;
   border-radius: 3px;
 }
@@ -89,7 +89,7 @@ export default {
 
   width: 27px;
   height: 4px;
-  background-color: var(--fillMedium);
+  background-color: var(--fillDarker);
   border-radius: 3px;
 }
 

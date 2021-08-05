@@ -20,10 +20,12 @@ export default {
 
 <style>
 :root {
-  /* --offWhite: #006d77; */
-  --fillDarker: #006d77;
-  /* --textDark: #edf6f9; */
-  --fillLighter: #edf6f9;
+
+  /* --fillDarker: #006d77; */
+  --fillDarker: #edf6f9;
+
+  /* --fillLighter: #edf6f9; */
+  --fillLighter: #006d77;
   --fillLight: #83c5be;
   --fillMedium: #7fb6bb;
 }
@@ -40,7 +42,8 @@ a {
 }
 
 body {
-  background-color: var(--fillDarker);
+  /* background-color: var(--fillDarker); */
+  /* background-color: #030f0a; */
   color: var(--fillLighter);
 }
 

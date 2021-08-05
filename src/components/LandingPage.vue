@@ -1,11 +1,24 @@
 <template lang="html">
   <div class="landingPageConatiner">
-    <div class="imageContainer">
+    <transition name="fadeInBG" appear>
+      <img class="backgroundImage" src="@/assets/pexels-ryan-knight-4568976.jpg" alt="ferns">
+    </transition>
+    <div class="middle">
+      <transition name="logo" appear>
+        <h1 class="topLine">Hi,</h1>
+      </transition>
+      <transition name="logo" appear>
+        <div class="middleLine">
+          <h2>my name is</h2>
+          <h1 class="leftSpace">Patrick Brusven.</h1>
+        </div>
+      </transition>
+      <transition name="logo" appear>
+        <h3 class="bottomLine">I’m a Software Developer currently located in Port Angeles Washington.</h3>
+      </transition>
     </div>
-    <h2 class="callOut">Hello, I'm Patrick.</h2>
-    <h3 class="oneLiner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
     <div class="bottom">
-      <p>check out my blog ||
+      <p>learn more about me ||
       continue to projects</p>
     </div>
   </div>
@@ -14,52 +27,92 @@
 <script>
 export default {
   name: 'LandingPage',
-
 }
 </script>
 
 <style lang="css" scoped>
 .landingPageConatiner {
-  background-color: var(--fillLighter);
+  /* background-color: var(--fillDarker); */
   color: var(--fillDarker);
   height: 100vh;
   width: 100vw;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
 
+  overflow: hidden;
 }
 
-.callOut {
+.backgroundImage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  filter: brightness(0.75);
+  z-index: -2;
+}
+
+.middle {
   grid-column: 1/4;
-  grid-row: 4/6;
+  grid-row: 2/3;
+  justify-self: center;
   align-self: center;
-  z-index: 40;
-  text-align: left;
-  /* justify-self: center; */
-  font-size: 32px;
+  width: 80%;
+  max-width: 430px;
 }
 
+.topLine {
 
-.oneLiner {
-  grid-column: 1/5;
-  grid-row: 6/8;
 }
 
-.imageContainer {
-  grid-column: 2/5;
-  margin: 10px;
-  grid-row: 2/4;
-  justify-self: flex-end;
-  width: 45vw;
-  height: 45vw;
-  border-radius: 45vw;
-  background-color: var(--fillLight);
+.middleLine {
+  display: flex;
+  align-items: baseline;
 }
+
+.leftSpace {
+  margin-left: 10px;
+}
+
+.bottomLine {
+  margin-top: 15px;
+}
+
 
 .bottom {
-  grid-row: 7/8;
-  grid-column: 1/5;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  justify-self: center;
+  align-self: center;
 }
+
+/* transition styleling */
+
+.fadeInBG-enter-from {
+  opacity: 0;
+}
+
+.fadeInBG-enter-to {
+  opacity: 1;
+}
+
+.fadeInBG-enter-active {
+  transition: opacity 0.5s ease;
+}
+
+.logo-enter-from {
+  opacity: 0;
+}
+
+.logo-enter-to {
+  opacity: 1;
+}
+
+.logo-enter-active {
+  transition: opacity 0.4s ease .3s;
+}
+
 </style>
