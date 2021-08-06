@@ -131,14 +131,7 @@ a {
 
 .navLogoOpen {
   /* color: var(--fillMedium); */
-
 }
-
-/* @media screen and (min-width: 768px) {
-  .mobileBurger {
-    display: none;
-  }
-} */
 
 
 .logo-enter-from {

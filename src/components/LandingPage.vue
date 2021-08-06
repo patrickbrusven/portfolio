@@ -1,8 +1,5 @@
 <template lang="html">
   <div class="landingPageConatiner">
-    <transition name="fadeInBG" appear>
-      <img class="backgroundImage" src="@/assets/pexels-ryan-knight-4568976.jpg" alt="ferns">
-    </transition>
     <div class="middle">
       <transition name="logo" appear>
         <h1 class="topLine">Hi,</h1>
@@ -40,19 +37,6 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 2fr 1fr;
-
-  overflow: hidden;
-}
-
-.backgroundImage {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-  filter: brightness(0.75);
-  z-index: -2;
 }
 
 .middle {
@@ -81,27 +65,13 @@ export default {
   margin-top: 15px;
 }
 
-
 .bottom {
   grid-column: 1/4;
   grid-row: 3/4;
   justify-self: center;
   align-self: center;
 }
-
 /* transition styleling */
-
-.fadeInBG-enter-from {
-  opacity: 0;
-}
-
-.fadeInBG-enter-to {
-  opacity: 1;
-}
-
-.fadeInBG-enter-active {
-  transition: opacity 0.5s ease;
-}
 
 .logo-enter-from {
   opacity: 0;

@@ -1,19 +1,18 @@
 <template>
-  <div class="appConatiner">
-    <Navigation />
-    <router-view/>
-    <Footer />
+  <Navigation />
+  <div class="parralaxContainer">
+      <router-view/>
   </div>
 </template>
 
 <script>
 import Navigation from '@/components/Navigation.vue'
-import Footer from '@/components/Footer.vue'
+// import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
     Navigation,
-    Footer,
+    // Footer,
   },
 }
 </script>
@@ -42,13 +41,11 @@ a {
 }
 
 body {
-  /* background-color: var(--fillDarker); */
+  margin: 0;
+  /* height: 100vh; */
+  background-color: var(--fillLighter);
   /* background-color: #030f0a; */
   color: var(--fillLighter);
-}
-
-.appConatiner {
-  position: relative;
 }
 
 #app {
@@ -56,4 +53,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+.parralaxContainer {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
 </style>
