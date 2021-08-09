@@ -1,6 +1,7 @@
 <template>
-  <Navigation />
+  <!-- <Navigation /> -->
   <div class="parralaxContainer">
+      <Navigation />
       <router-view/>
   </div>
 </template>
@@ -43,7 +44,9 @@ a {
 body {
   margin: 0;
   /* height: 100vh; */
-  background-color: var(--fillLighter);
+  /* background-color: var(--fillLighter); */
+    background-image: linear-gradient(to bottom, #181818, #181818);
+  /* background-image: linear-gradient(to bottom right, red, yellow); */
   /* background-color: #030f0a; */
   color: var(--fillLighter);
 }

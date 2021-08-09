@@ -8,6 +8,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/#top',
+    name: 'Top',
+    component: Home
+  },
+  {
     path: '/#projects',
     name: 'Projects',
     component: Home
@@ -32,8 +37,10 @@ const router = createRouter({
   // eslint-disable-next-line no-unused-vars
   scrollBehavior (to, from, savedPosition) {
     if (to.hash) {
-      return {el: to.hash,
-              top: 53,}
+
+      const element = document.getElementById(to.hash.replace(/#/, ''))
+      element.scrollIntoView({ behavior: "smooth",
+                                block: 'start'});
     } else if (savedPosition) {
       return savedPosition
     } else {

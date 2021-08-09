@@ -46,8 +46,8 @@ export default {
       };
       const observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          console.log(entry.target)
-          console.log(entry.isIntersecting)
+          // console.log(entry.target)
+          // console.log(entry.isIntersecting)
           if(entry.target.classList.contains('experienceContainer') && entry.isIntersecting) {
             const LandingPage = document.querySelector('.landingPage');
             const backgroundImage = document.querySelector('.backgroundImage');
@@ -56,11 +56,10 @@ export default {
             entry.target.classList.toggle('placeholder');
             LandingPage.classList.toggle('disappear');
             backgroundImage.classList.toggle('disappear');
-
           }
 
           else if (entry.target.classList.contains('experienceContainer') && entry.target.classList.contains('placeholder') && !entry.isIntersecting) {
-            console.log('notintersecting')
+            // console.log('notintersecting')
             const LandingPage = document.querySelector('.landingPage');
             const backgroundImage = document.querySelector('.backgroundImage');
 

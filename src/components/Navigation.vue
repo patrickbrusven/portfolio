@@ -1,7 +1,7 @@
 <template lang="html">
 <transition name="header" appear>
 <div class="header">
-  <router-link to="/">
+  <router-link to="/#top">
     <transition name="logo" appear>
       <h1 @click='clickName()' class="navLogo">PB</h1>
     </transition>
@@ -78,7 +78,8 @@ a {
 
 .header {
   /* background-color: var(--fillDarker); */
-  position: fixed;
+  position: sticky;
+  margin-top: -58px;
   height: 50px;
   width: 100vw;
   top: 0;

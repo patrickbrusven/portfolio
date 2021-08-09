@@ -44,6 +44,6 @@ export default {
 
   /* padding-top: 10px; */
   min-height: 90vh;
-  background-color: var(--fillLighter);
+  /* background-color: var(--fillLighter); */
 }
 </style>

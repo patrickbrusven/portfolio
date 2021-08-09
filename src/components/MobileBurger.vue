@@ -32,7 +32,7 @@ export default {
   width: 50px;
   cursor: pointer;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
 

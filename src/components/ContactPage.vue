@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="contactPageContainer">
     <div class="words">
-      <h5>Let's Collaborate</h5>
+      <h2>Let's Collaborate</h2>
     </div>
     <div class="contactLinks">
       <a href="https://www.linkedin.com/in/patrick-brusven-26b3b277/" target="_blank" rel="noopener noreferrer">
@@ -34,8 +34,27 @@ a {
 
 .contactPageContainer {
   width: 100vw;
-  background-color: var(--fillLighter);
+  /* background-color: var(--fillLighter); */
   color: var(--fillDarker);
+  display: flex;
+  flex-direction: column;
+  height: 29vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.words {
+  margin-top: 50px;
+}
+
+
+.contactLinks {
+  display: flex;
+  flex-direction: row;
+  width: 79%;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 svg {

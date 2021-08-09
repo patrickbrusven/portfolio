@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="landingPageConatiner">
+  <div id="top" class="landingPageConatiner">
     <div class="middle">
       <transition name="logo" appear>
         <h1 class="topLine">Hi,</h1>
