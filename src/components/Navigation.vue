@@ -3,7 +3,11 @@
 <div class="header">
   <router-link to="/#top">
     <transition name="logo" appear>
-      <h1 @click='clickName()' class="navLogo">PB</h1>
+      <!-- <h1 @click='clickName()' class="navLogo">PB</h1> -->
+      <div @click='clickName()' class="navLogo">
+        <div class="p">P</div>
+        <div class="b">B</div>
+      </div>
     </transition>
   </router-link>
   <transition name="logo" appear>
@@ -11,7 +15,7 @@
   </transition>
   <div id="nav" class="navContainer">
     <router-link @click='toggleNavigation' to="/about">About</router-link>
-    <router-link @click='toggleNavigation' to="/#projects">Projects</router-link>
+    <router-link @click='toggleNavigation' to="/#projects">Portfolio</router-link>
     <router-link @click='toggleNavigation' to="/#contact">Contact</router-link>
   </div>
 </div>
@@ -125,9 +129,39 @@ a {
   right: 0px;
 }
 
-.navLogo {
+/* .navLogo {
+  font-family: 'Andada Pro', serif;
   margin-left: 5px;
-    transition: color .1s linear .4s;
+  transition: color .1s linear .4s;
+  font-size: 50px;
+} */
+
+.navLogo {
+  font-family: 'Roboto Slab', 'Andada Pro', serif;
+  margin-left: 10px;
+  margin-top: -16px;
+  transition: color .1s linear .4s;
+  font-size: 31px;
+
+  /* position: relative; */
+
+  /* display: flex; */
+}
+
+.navLogo {
+  position: relative;
+  display: flex;
+}
+
+.p {
+
+}
+
+.b {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  /* position: absolute; */
 }
 
 .navLogoOpen {

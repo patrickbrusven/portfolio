@@ -35,6 +35,7 @@ export default {
 
 <style lang="css" scoped>
 .projectContainer {
+  color: var(--fillLighter);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -42,10 +43,14 @@ export default {
   justify-content: center;
 
   width: 80vw;
+  max-width: 430px;
   height: 40vh;
+  max-height: 233px;
   margin: 10px;
 
   border-radius: 30px;
+
+  overflow: hidden;
 }
 
 .background {
@@ -58,7 +63,7 @@ export default {
   width: 100%;
   object-fit: cover;
   border-radius: 30px;
-  filter: brightness(60%);
+  filter: brightness(70%);
   opacity: 1;
 
   transition: opacity .3s linear;
@@ -66,9 +71,10 @@ export default {
 
 .logo {
   position: absolute;
-  width: 40vw;
-
-  transition: width .2s linear, opacity .3s linear;
+  height: 60%;
+  border-radius: 10px;
+  opacity: .9;
+  transition: height .2s linear, opacity .3s linear;
 }
 
 .content {
@@ -104,7 +110,7 @@ a {
 }
 
 .projectContainer:hover > .logo {
-  width: 60vw;
+  height: 100%;
   opacity: 0;
 }
 .projectContainer:hover > picture > .background {

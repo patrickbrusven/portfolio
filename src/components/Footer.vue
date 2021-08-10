@@ -14,6 +14,8 @@ export default {
 .footerContainer {
   width: 100vw;
   height: 50px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: center;
   font-size: 16px;

@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="contactPageContainer">
     <div class="words">
-      <h2>Let's Collaborate</h2>
+      <h1>Let's Collaborate</h1>
+      <!-- <p>Let's Collaborate</p> -->
     </div>
     <div class="contactLinks">
       <a href="https://www.linkedin.com/in/patrick-brusven-26b3b277/" target="_blank" rel="noopener noreferrer">
@@ -30,6 +31,11 @@ export default {
 
 a {
   color: var(--fillDarker);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
 }
 
 .contactPageContainer {
@@ -38,20 +44,27 @@ a {
   color: var(--fillDarker);
   display: flex;
   flex-direction: column;
-  height: 29vh;
+  height: 200px;
   justify-content: space-around;
   align-items: center;
 }
 
 .words {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 106px;
+
+  width: 80%;
+  max-width: 430px;
 }
 
 
 .contactLinks {
   display: flex;
   flex-direction: row;
-  width: 79%;
+  width: 400px;
   justify-content: space-evenly;
   margin-bottom: 50px;
   margin-top: 50px;

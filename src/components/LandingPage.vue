@@ -15,8 +15,8 @@
       </transition>
     </div>
     <div class="bottom">
-      <p>learn more about me ||
-      continue to projects</p>
+      <p>continue to <router-link to="/#projects">portfolio</router-link> ||
+      more <router-link to="/about">about</router-link> me</p>
     </div>
   </div>
 </template>
@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+a {
+  /* color: var(--fillmedium); */
+}
 .landingPageConatiner {
   /* background-color: var(--fillDarker); */
   color: var(--fillDarker);

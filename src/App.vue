@@ -45,10 +45,10 @@ body {
   margin: 0;
   /* height: 100vh; */
   /* background-color: var(--fillLighter); */
-    background-image: linear-gradient(to bottom, #181818, #181818);
+    background-image: linear-gradient(to bottom, var(--fillLight), var(--fillLighter));
   /* background-image: linear-gradient(to bottom right, red, yellow); */
   /* background-color: #030f0a; */
-  color: var(--fillLighter);
+  color: var(--fillDarker);
 }
 
 #app {

@@ -1,6 +1,16 @@
 <template lang="html">
   <div class="experienceContainer">
-    <h3>Experience</h3>
+    <div class="heading">
+      <h1>Portfolio</h1>
+      <p>Below you will find some of my latest work</P>
+    </div>
+    <Project title="Menu Builder App"
+            bgfilename="drinkMED.jpg"
+            logofilename="logo0.png"
+            description="Full-stack Development, MEVN"
+            websiteLink="https://thawing-fortress-58484.herokuapp.com/"
+            ghLink="https://github.com/patrickbrusven/menu-builder"
+            />
     <Project title="408 EXCHANGE TAVERN"
             bgfilename="logoOnBrickSmall.jpg"
             logofilename="408LogoDarkBG.svg"
@@ -8,12 +18,13 @@
             websiteLink="https://www.408exchange.com/"
             ghLink="https://github.com/patrickbrusven/"
             />
-    <Project title="Menu Builder App"
-            bgfilename="drinkMED.jpg"
-            logofilename="logo0.png"
-            description="Full-stack Development, MEVN"
-            websiteLink="https://thawing-fortress-58484.herokuapp.com/"
-            ghLink="https://github.com/patrickbrusven/menu-builder"
+
+    <Project title="Portfolio Website"
+            bgfilename="pexels-ryan-knight-4568976.jpg"
+            logofilename="PB.png"
+            description="Front-end Development"
+            websiteLink="https://www.patrickbrusven.com/"
+            ghLink="https://github.com/patrickbrusven/portfolio"
             />
   </div>
 
@@ -45,5 +56,16 @@ export default {
   /* padding-top: 10px; */
   min-height: 90vh;
   /* background-color: var(--fillLighter); */
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 106px;
+
+  width: 80%;
+  max-width: 430px;
 }
 </style>
