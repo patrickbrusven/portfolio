@@ -20,7 +20,7 @@
             />
 
     <Project title="Portfolio Website"
-            bgfilename="pexels-ryan-knight-4568976.jpg"
+            bgfilename="lpBackgroundSM.jpg"
             logofilename="PB.png"
             description="Front-end Development"
             websiteLink="https://www.patrickbrusven.com/"
