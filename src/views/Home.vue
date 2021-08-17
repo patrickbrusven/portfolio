@@ -2,7 +2,14 @@
 <div class="parralax_group">
   <div class="parralax_layer parralax_layer-background">
     <transition name="fadeInBG" appear>
-      <img class="backgroundImage transitionController" src="@/assets/pexels-ryan-knight-4568976.jpg" alt="ferns">
+      <picture>
+        <source srcset="@/assets/lpBackgroundLRG.jpg"
+        media="(min-width: 1024px)">
+        <source srcset="@/assets/lpBackgroundMED.jpg"
+        media="(min-width: 640px)">
+        <source srcset="@/assets/lpBackgroundSM.jpg">
+        <img class="backgroundImage" src="@/assets/lpBackgroundMED.jpg" alt="lusch ferns in forest"/>
+      </picture>
     </transition>
   </div>
   <div class="parralax_layer parralax_layer-base">
