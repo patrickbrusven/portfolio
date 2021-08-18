@@ -83,6 +83,7 @@ a {
 .header {
   /* background-color: var(--fillDarker); */
   position: sticky;
+  position: -webkit-sticky;
   margin-top: -58px;
   height: 50px;
   width: 100vw;

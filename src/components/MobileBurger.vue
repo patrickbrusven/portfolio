@@ -33,6 +33,7 @@ export default {
   cursor: pointer;
 
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   right: 0;
 
