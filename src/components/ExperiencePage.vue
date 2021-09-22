@@ -8,7 +8,7 @@
             bgfilename="drinkMED.jpg"
             logofilename="logo0.png"
             description="Full-stack Development, MEVN"
-            websiteLink="https://thawing-fortress-58484.herokuapp.com/"
+            websiteLink="https://menubuilderv2.herokuapp.com/"
             ghLink="https://github.com/patrickbrusven/menu-builder"
             />
     <Project title="408 EXCHANGE TAVERN"
