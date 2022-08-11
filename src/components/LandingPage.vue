@@ -29,7 +29,7 @@ export default {
 
 <style lang="css" scoped>
 a {
-  /* color: var(--fillmedium); */
+  color: #b290ff;
 }
 .landingPageConatiner {
   /* background-color: var(--fillDarker); */
