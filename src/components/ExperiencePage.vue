@@ -8,14 +8,14 @@
             bgfilename="drinkMED.jpg"
             logofilename="logo0.png"
             description="Full-stack Development, MEVN"
-            websiteLink="https://menubuilderv2.herokuapp.com/"
+            websiteLink="https://menubuilder.onrender.com/"
             ghLink="https://github.com/patrickbrusven/menu-builder"
             />
     <Project title="408 EXCHANGE TAVERN"
             bgfilename="logoOnBrickSmall.jpg"
             logofilename="408LogoDarkBG.svg"
             description="Front-end Web Development, Designer"
-            websiteLink="https://www.408exchange.com/"
+            websiteLink="http://408exchange.com/"
             ghLink="https://github.com/patrickbrusven/"
             />
 
@@ -31,15 +31,15 @@
 </template>
 
 <script>
-import Project from '@/components/Project.vue'
+import Project from "@/components/Project.vue";
 
 export default {
-  name: 'ExperiencePage',
+  name: "ExperiencePage",
 
   components: {
     Project,
-  }
-}
+  },
+};
 </script>
 
 <style lang="css" scoped>
